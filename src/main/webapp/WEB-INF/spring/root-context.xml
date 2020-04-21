@@ -28,4 +28,9 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
+    
+    <mybatis-spring:scan
+		base-package="com.ksh.cafeTaste.menu.dao" />
+	<context:component-scan 
+		base-package="com.ksh.cafeTaste.menu.service"></context:component-scan>    
 </beans>
