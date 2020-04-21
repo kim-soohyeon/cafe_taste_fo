@@ -14,11 +14,11 @@
 	    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
 	
 	    <!-- Css Styles -->
-	    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-	    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-	    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-	    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-	    <link rel="stylesheet" href="css/style.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/bootstrap.min.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/font-awesome.min.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/nice-select.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/slicknav.min.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/style.css" type="text/css">
 	</head>
 	
 	<body>
@@ -31,7 +31,7 @@
 	    <header class="header-section-other">
 	        <div class="container-fluid">
 	            <div class="logo">
-	                <a href="./index.html"><img src="img/little-logo.png" alt=""></a>
+	                <a href="/index"><img src="${pagecontext.request.contextpath}/img/little-logo.png" alt=""></a>
 	            </div>
 	            <div class="nav-menu">
 	                <nav class="main-menu mobile-menu">
@@ -61,7 +61,7 @@
 	    <!-- Header End -->
 	
 	    <!-- Hero Search Section Begin -->
-	    <div class="hero-search set-bg" data-setbg="img/search-bg.jpg">
+	    <div class="hero-search set-bg" data-setbg="${pagecontext.request.contextpath}/img/search-bg.jpg">
 	        <div class="container">
 	            <div class="filter-table">
 	                <form action="#" class="filter-search">
@@ -85,7 +85,7 @@
 	            <div class="row">
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-1.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-1.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -98,7 +98,7 @@
 	                </div>
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-2.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-2.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -111,7 +111,7 @@
 	                </div>
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-3.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-3.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -124,7 +124,7 @@
 	                </div>
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-4.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-4.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -137,7 +137,7 @@
 	                </div>
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-5.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-5.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -150,7 +150,7 @@
 	                </div>
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-6.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-6.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -163,7 +163,7 @@
 	                </div>
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-7.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-7.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -176,7 +176,7 @@
 	                </div>
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-8.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-8.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -189,7 +189,7 @@
 	                </div>
 	                <div class="col-lg-4 col-sm-6">
 	                    <div class="recipe-item">
-	                        <a href="#"><img src="img/recipe/recipe-9.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/recipe/recipe-9.jpg" alt=""></a>
 	                        <div class="ri-text">
 	                            <div class="cat-name">Desert</div>
 	                            <a href="#">
@@ -228,7 +228,7 @@
 	            <div class="row">
 	                <div class="col-lg-7">
 	                    <div class="cfr-item">
-	                        <div class="cfr-item-img set-bg" data-setbg="img/cat-feature/big-1.jpg">
+	                        <div class="cfr-item-img set-bg" data-setbg="${pagecontext.request.contextpath}/img/cat-feature/big-1.jpg">
 	                            <i class="fa fa-plus"></i>
 	                        </div>
 	                        <div class="cfr-item-text">
@@ -241,7 +241,7 @@
 	                        </div>
 	                    </div>
 	                    <div class="cfr-item">
-	                        <div class="cfr-item-img set-bg" data-setbg="img/cat-feature/big-2.jpg">
+	                        <div class="cfr-item-img set-bg" data-setbg="${pagecontext.request.contextpath}/img/cat-feature/big-2.jpg">
 	                            <i class="fa fa-plus"></i>
 	                        </div>
 	                        <div class="cfr-item-text">
@@ -254,7 +254,7 @@
 	                        </div>
 	                    </div>
 	                    <div class="cfr-item">
-	                        <div class="cfr-item-img set-bg" data-setbg="img/cat-feature/big-3.jpg">
+	                        <div class="cfr-item-img set-bg" data-setbg="${pagecontext.request.contextpath}/img/cat-feature/big-3.jpg">
 	                            <i class="fa fa-plus"></i>
 	                        </div>
 	                        <div class="cfr-item-text">
@@ -267,7 +267,7 @@
 	                        </div>
 	                    </div>
 	                    <div class="cfr-item">
-	                        <div class="cfr-item-img set-bg" data-setbg="img/cat-feature/big-4.jpg">
+	                        <div class="cfr-item-img set-bg" data-setbg="${pagecontext.request.contextpath}/img/cat-feature/big-4.jpg">
 	                            <i class="fa fa-plus"></i>
 	                        </div>
 	                        <div class="cfr-item-text">
@@ -282,49 +282,49 @@
 	                </div>
 	                <div class="col-lg-4 offset-lg-1">
 	                    <div class="cfr-small-item">
-	                        <a href="#"><img src="img/cat-feature/small-1.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/cat-feature/small-1.jpg" alt=""></a>
 	                        <div class="cfr-small-text">
 	                            <div class="cat-name">Vegan</div>
 	                            <h6>One Pot Weeknight Lasagna Soup Recipe</h6>
 	                        </div>
 	                    </div>
 	                    <div class="cfr-small-item">
-	                        <a href="#"><img src="img/cat-feature/small-2.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/cat-feature/small-2.jpg" alt=""></a>
 	                        <div class="cfr-small-text">
 	                            <div class="cat-name">Vegan</div>
 	                            <h6>Lava Cake with a Tone of Chocolate</h6>
 	                        </div>
 	                    </div>
 	                    <div class="cfr-small-item">
-	                        <a href="#"><img src="img/cat-feature/small-3.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/cat-feature/small-3.jpg" alt=""></a>
 	                        <div class="cfr-small-text">
 	                            <div class="cat-name">Vegan</div>
 	                            <h6>One Pot Weeknight Lasagna Soup Recipe</h6>
 	                        </div>
 	                    </div>
 	                    <div class="cfr-small-item">
-	                        <a href="#"><img src="img/cat-feature/small-4.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/cat-feature/small-4.jpg" alt=""></a>
 	                        <div class="cfr-small-text">
 	                            <div class="cat-name">Vegan</div>
 	                            <h6>Smoked Salmon mini Sandwiches with Onion</h6>
 	                        </div>
 	                    </div>
 	                    <div class="cfr-small-item">
-	                        <a href="#"><img src="img/cat-feature/small-5.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/cat-feature/small-5.jpg" alt=""></a>
 	                        <div class="cfr-small-text">
 	                            <div class="cat-name">Vegan</div>
 	                            <h6>Asparagus with Pork Loin and Vegetables</h6>
 	                        </div>
 	                    </div>
 	                    <div class="cfr-small-item">
-	                        <a href="#"><img src="img/cat-feature/small-6.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/cat-feature/small-6.jpg" alt=""></a>
 	                        <div class="cfr-small-text">
 	                            <div class="cat-name">Vegan</div>
 	                            <h6>Dry Cookies with Corn</h6>
 	                        </div>
 	                    </div>
 	                    <div class="cfr-small-item">
-	                        <a href="#"><img src="img/cat-feature/small-7.jpg" alt=""></a>
+	                        <a href="#"><img src="${pagecontext.request.contextpath}/img/cat-feature/small-7.jpg" alt=""></a>
 	                        <div class="cfr-small-text">
 	                            <div class="cat-name">Vegan</div>
 	                            <h6>Italian Tiramisu with Coffe</h6>
@@ -343,8 +343,8 @@
 	                <div class="col-lg-5">
 	                    <div class="fs-left">
 	                        <div class="logo">
-	                            <a href="./index.html">
-	                                <img src="img/footer-logo.png" alt="">
+	                            <a href="/index">
+	                                <img src="${pagecontext.request.contextpath}/img/footer-logo.png" alt="">
 	                            </a>
 	                        </div>
 	                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -392,11 +392,11 @@
 		<!-- Search model end -->
 	
 	    <!-- Js Plugins -->
-	    <script src="js/jquery-3.3.1.min.js"></script>
-	    <script src="js/bootstrap.min.js"></script>
-	    <script src="js/jquery.slicknav.js"></script>
-	    <script src="js/jquery.nice-select.min.js"></script>
-	    <script src="js/mixitup.min.js"></script>
-	    <script src="js/main.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/jquery-3.3.1.min.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/bootstrap.min.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/jquery.slicknav.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/jquery.nice-select.min.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/mixitup.min.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/main.js"></script>
 	</body>
 </html>

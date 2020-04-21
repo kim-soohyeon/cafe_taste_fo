@@ -14,11 +14,11 @@
 	    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
 	
 	    <!-- Css Styles -->
-	    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-	    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-	    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-	    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-	    <link rel="stylesheet" href="css/style.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/bootstrap.min.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/font-awesome.min.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/nice-select.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/slicknav.min.css" type="text/css">
+	    <link rel="stylesheet" href="${pagecontext.request.contextpath}/css/style.css" type="text/css">
 	</head>
 	
 	<body>
@@ -31,7 +31,7 @@
 	    <header class="header-section">
 	        <div class="container">
 	            <div class="logo">
-	                <a href="./index.html"><img src="img/logo.png" alt=""></a>
+	                <a href="/index"><img src="img/logo.png" alt=""></a>
 	            </div>
 	            <div class="nav-menu">
 	                <nav class="main-menu mobile-menu">
@@ -47,7 +47,7 @@
 	                            </ul>
 	                        </li>
 	                        <li><a href="recipe.html">Recipes</a></li>
-	                        <li><a href="categories.html">메뉴</a></li>
+	                        <li><a href="/menu/menu">메뉴</a></li>
 	                        <li><a href="contact.html">Contact</a></li>
 	                    </ul>
 	                </nav>
@@ -332,7 +332,7 @@
 	                <div class="col-lg-5">
 	                    <div class="fs-left">
 	                        <div class="logo">
-	                            <a href="./index.html">
+	                            <a href="/index">
 	                                <img src="img/footer-logo.png" alt="">
 	                            </a>
 	                        </div>
@@ -381,11 +381,11 @@
 		<!-- Search model end -->
 	
 	    <!-- Js Plugins -->
-	    <script src="js/jquery-3.3.1.min.js"></script>
-	    <script src="js/bootstrap.min.js"></script>
-	    <script src="js/jquery.slicknav.js"></script>
-	    <script src="js/jquery.nice-select.min.js"></script>
-	    <script src="js/mixitup.min.js"></script>
-	    <script src="js/main.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/jquery-3.3.1.min.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/bootstrap.min.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/jquery.slicknav.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/jquery.nice-select.min.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/mixitup.min.js"></script>
+	    <script src="${pagecontext.request.contextpath}/js/main.js"></script>
 	</body>
 </html>
