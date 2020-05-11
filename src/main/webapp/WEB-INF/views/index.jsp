@@ -1,7 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
+	<style>
+	.cat-name {
+	    background: #FC0254;
+	    display: inline-block;
+	    font-size: 12px;
+	    font-weight: 700;
+	    text-transform: uppercase;
+	    padding: 4px 8px 4px 10px;
+	}
+	</style>
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="description" content="Yoga Studio Template">
@@ -28,10 +39,10 @@
 	    </div>
 	
 	    <!-- Header Section Begin -->
-	    <header class="header-section">
-	        <div class="container">
+	    <header class="header-section-other">
+	        <div class="container-fluid">
 	            <div class="logo">
-	                <a href="/index"><img src="img/logo.png" alt=""></a>
+	                <a href="/index"><img src="${pagecontext.request.contextpath}/img/little-logo.png" alt=""></a>
 	            </div>
 	            <div class="nav-menu">
 	                <nav class="main-menu mobile-menu">
@@ -49,11 +60,12 @@
 	                        <li><a href="recipe.html">Recipes</a></li>
 	                        <li><a href="/menu/menu">메뉴</a></li>
 	                        <li><a href="contact.html">Contact</a></li>
+	                        <li class="cat-name"><a href="login" style="color: #fff;">로그인</a></li>
 	                    </ul>
 	                </nav>
-	                <div class="nav-right search-switch">
+	                <!-- <div class="nav-right search-switch">
 	                    <i class="fa fa-search"></i>
-	                </div>
+	                </div> -->
 	            </div>
 	            <div id="mobile-menu-wrap"></div>
 	        </div>
