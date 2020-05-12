@@ -6,4 +6,6 @@ public interface UserDAO {
 
 	public void register(UserVO vo);
 	
+	public UserVO login(UserVO vo);
+	
 }
