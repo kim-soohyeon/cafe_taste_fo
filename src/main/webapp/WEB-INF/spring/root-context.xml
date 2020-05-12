@@ -32,5 +32,9 @@
     <mybatis-spring:scan
 		base-package="com.ksh.cafeTaste.menu.dao" />
 	<context:component-scan 
-		base-package="com.ksh.cafeTaste.menu.service"></context:component-scan>    
+		base-package="com.ksh.cafeTaste.menu.service"></context:component-scan>   
+	<mybatis-spring:scan
+		base-package="com.ksh.cafeTaste.user.dao" />
+	<context:component-scan 
+		base-package="com.ksh.cafeTaste.user.service"></context:component-scan>    
 </beans>
