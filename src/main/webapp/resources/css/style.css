@@ -2570,3 +2570,12 @@ ol {
 		right: calc(50% - 131px);
 	}
 }
+
+.login-btn {
+    background: #FC0254;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px 4px 10px;
+}
