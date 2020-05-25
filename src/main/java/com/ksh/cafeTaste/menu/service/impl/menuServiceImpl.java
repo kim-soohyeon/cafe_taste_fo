@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ksh.cafeTaste.menu.dao.menuDAO;
+import com.ksh.cafeTaste.menu.dto.menuDTO;
 import com.ksh.cafeTaste.menu.service.menuService;
 
 @Service
@@ -18,6 +19,11 @@ public class menuServiceImpl implements menuService{
 	@Override
 	public List<HashMap> getMenuList() {
 		return dao.getMenuList();
+	}
+
+	@Override
+	public List<menuDTO> getMenuDtlList(String id) {
+		return dao.getMenuDtlList(id);
 	}
 
 

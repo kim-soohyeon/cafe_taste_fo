@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ksh.cafeTaste.menu.dto.menuDTO;
 import com.ksh.cafeTaste.menu.service.menuService;
 
 @Controller
@@ -44,5 +47,16 @@ public class MenuController {
 		String json = mapper.writeValueAsString(menuList);
 		System.out.println(json);
 	    return json;
+	}
+	
+	//메뉴 상세 GET
+	@RequestMapping(value = "/menuDetail/{id}", method = RequestMethod.GET) 
+	public String menuDetail(@PathVariable String id, Model model) { 
+		System.out.println("=============menuDetail=================");
+		System.out.println(id);
+		List<menuDTO> menuDtl = service.getMenuDtlList(id);
+        model.addAttribute("menuDtl", menuDtl);
+        System.out.println(menuDtl);
+		return "menu/menuDetail"; 
 	}
 }

@@ -193,26 +193,25 @@
 		<script id="menuListItem" type="text/x-jquery-tmpl"> 
 		<div class="col-lg-4 col-sm-6">
 		    <div class="recipe-item">
-		        <a href="#"><img src="\${imgSrc}" alt=""></a>
+		        <a href="${pagecontext.request.contextpath}/menu/menuDetail/\${id}"><img src="\${imgSrc}" alt=""></a>
 		        <div class="ri-text">
 					{{if type == "음료"}}   
 						<div class="cat-name" style="background: #381E0F;">\${type}</div>
 					{{else}}
 						<div class="cat-name" style="background: #381e0f69;">\${type}</div>
 		            {{/if}}
-					
-		            <a href="#">
+		            <a>
 		                <h4>\${menuNm}</h4>
 		            </a>
-<div class="product-ratings">
-		    	<ul class="list-inline">
-		    		<li class="list-inline-item selected"><i class="fa fa-star"></i></li>
-		    		<li class="list-inline-item selected"><i class="fa fa-star"></i></li>
-		    		<li class="list-inline-item selected"><i class="fa fa-star"></i></li>
-		    		<li class="list-inline-item"><i class="fa fa-star"></i></li>
-		    		<li class="list-inline-item"><i class="fa fa-star"></i></li>
-		    	</ul>
-		    </div>
+					<div class="product-ratings">
+		    			<ul class="list-inline">
+		    				<li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+		    				<li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+		    				<li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+		    				<li class="list-inline-item"><i class="fa fa-star"></i></li>
+		    				<li class="list-inline-item"><i class="fa fa-star"></i></li>
+		    			</ul>
+		    		</div>
 		            <p>\${descript}</p>
 		        </div>
 		    </div>
