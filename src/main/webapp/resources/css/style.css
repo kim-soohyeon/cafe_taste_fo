@@ -2579,3 +2579,11 @@ ol {
     text-transform: uppercase;
     padding: 4px 8px 4px 10px;
 }
+.product-ratings .selected i {
+    color: #ffc107;
+}
+
+.product-ratings li i {
+    font-size: 18px;
+    cursor: pointer;
+}
