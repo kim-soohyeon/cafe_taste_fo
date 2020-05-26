@@ -20,5 +20,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	WHERE id=#{id}
 </select>
 
-
+<!-- 평점 등록 -->
+<insert id="regRating">
+	INSERT INTO cafe_taste.rating(userId
+								, menuId
+								, rating)
+				VALUES(#{userId}
+								, #{menuId}
+								, #{rating})
+</insert>
 </mapper>

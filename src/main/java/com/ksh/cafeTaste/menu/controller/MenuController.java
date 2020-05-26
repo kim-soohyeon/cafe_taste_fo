@@ -3,20 +3,29 @@ package com.ksh.cafeTaste.menu.controller;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ksh.cafeTaste.menu.dto.menuDTO;
+import com.ksh.cafeTaste.menu.dto.ratingDTO;
 import com.ksh.cafeTaste.menu.service.menuService;
+import com.ksh.cafeTaste.user.dto.UserVO;
 
 @Controller
 @RequestMapping("/menu/*")
@@ -33,7 +42,7 @@ public class MenuController {
 	
 	//메뉴 리스트 조회 POST
 	@RequestMapping(value = "/getMenuList.do", method = RequestMethod.POST, produces = "application/json; charset=utf8")
-	public @ResponseBody String getMenuList()throws JsonGenerationException, JsonMappingException, IOException {
+	public @ResponseBody String getMenuList() throws JsonGenerationException, JsonMappingException, IOException {
 		List<HashMap> menuList = service.getMenuList();
 		for(int i=0; i<menuList.size(); i++) {
 			String type=(String) menuList.get(i).get("type");
@@ -52,11 +61,33 @@ public class MenuController {
 	//메뉴 상세 GET
 	@RequestMapping(value = "/menuDetail/{id}", method = RequestMethod.GET) 
 	public String menuDetail(@PathVariable String id, Model model) { 
-		System.out.println("=============menuDetail=================");
-		System.out.println(id);
 		List<menuDTO> menuDtl = service.getMenuDtlList(id);
         model.addAttribute("menuDtl", menuDtl);
+        model.addAttribute("menuId", id);
         System.out.println(menuDtl);
 		return "menu/menuDetail"; 
 	}
+	
+	/* 평점 등록 */
+	@RequestMapping(value = "/rating.do", method = RequestMethod.POST, produces = "application/json; charset=utf8") 
+	public @ResponseBody String rating(ratingDTO reqDto, HttpServletRequest req) { 
+		HttpSession session = req.getSession();
+		UserVO login = (UserVO)session.getAttribute("member");
+		JSONObject jsonObject = new JSONObject();
+	     
+		if(login == null) {
+			jsonObject.put("status", "fail");
+		    jsonObject.put("msg", "로그인 정보가 없습니다.");
+		}else {
+			//평점 등록
+			reqDto.setUserId(login.getId());
+			service.regRating(reqDto);
+			jsonObject.put("status", "success");
+			jsonObject.put("msg", "평점이 등록되었습니다.");
+		}
+		String jsonStr = jsonObject.toJSONString();
+		System.out.println(jsonStr);
+		return jsonStr; 
+	}
+
 }

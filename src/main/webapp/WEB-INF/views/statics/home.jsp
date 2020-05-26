@@ -13,7 +13,7 @@
 					<label for="password">비밀번호</label>
 					<input type="password" id="password" name="password" class="form-control" placeholder="비밀번호">
 				</div>
-				<div class="form-action">
+				<div class="form-group has-feedback">
 					<button class="btn btn-primary btn-lg" type="submit">로그인</button>
 					<button onclick="location.href='/user/register'" class="btn btn-default btn-lg" type="button">회원가입</button>
 				</div>
