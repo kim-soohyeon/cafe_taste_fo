@@ -60,7 +60,26 @@ public class MenuController {
 	
 	//메뉴 상세 GET
 	@RequestMapping(value = "/menuDetail/{id}", method = RequestMethod.GET) 
-	public String menuDetail(@PathVariable String id, Model model) { 
+	public String menuDetail(@PathVariable String id, Model model, HttpServletRequest req) {
+		HttpSession session = req.getSession();
+		
+		UserVO login = (UserVO)session.getAttribute("member");
+		model.addAttribute("rating", "0");
+		model.addAttribute("ajaxUrl", "/menu/rating.do");
+		
+//		로그인 정보가 있으면 평점 데이터 가져오기
+		if(login != null) {
+			ratingDTO rating = new ratingDTO();
+			rating.setUserId(login.getId());
+			rating.setMenuId(id);
+			ratingDTO ratingData = service.getRating(rating);
+			System.out.println(ratingData);
+			if(ratingData.getCount() > 0) {
+				model.addAttribute("rating", ratingData.getRating());
+				model.addAttribute("ajaxUrl", "/menu/updateRating.do");
+			}
+		}
+		
 		List<menuDTO> menuDtl = service.getMenuDtlList(id);
         model.addAttribute("menuDtl", menuDtl);
         model.addAttribute("menuId", id);
@@ -68,7 +87,7 @@ public class MenuController {
 		return "menu/menuDetail"; 
 	}
 	
-	/* 평점 등록 */
+//	평점 등록
 	@RequestMapping(value = "/rating.do", method = RequestMethod.POST, produces = "application/json; charset=utf8") 
 	public @ResponseBody String rating(ratingDTO reqDto, HttpServletRequest req) { 
 		HttpSession session = req.getSession();
@@ -85,6 +104,22 @@ public class MenuController {
 			jsonObject.put("status", "success");
 			jsonObject.put("msg", "평점이 등록되었습니다.");
 		}
+		String jsonStr = jsonObject.toJSONString();
+		System.out.println(jsonStr);
+		return jsonStr; 
+	}
+	
+	@RequestMapping(value = "/updateRating.do", method = RequestMethod.POST, produces = "application/json; charset=utf8") 
+	public @ResponseBody String updateRating(ratingDTO reqDto, HttpServletRequest req) { 
+		HttpSession session = req.getSession();
+		UserVO login = (UserVO)session.getAttribute("member");
+		JSONObject jsonObject = new JSONObject();
+		
+		reqDto.setUserId(login.getId());
+		service.updateRating(reqDto);
+		jsonObject.put("status", "success");
+		jsonObject.put("msg", "평점 수정이 완료되었습니다.");
+		
 		String jsonStr = jsonObject.toJSONString();
 		System.out.println(jsonStr);
 		return jsonStr; 

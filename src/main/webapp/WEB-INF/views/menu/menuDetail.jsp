@@ -78,7 +78,7 @@
 							    	<input type="radio" name="star-input" value="5" id="p5">
 							    	<label for="p5">5</label>
 							  	</span>
-							  	<button onclick="regRating();" class="btn btn-outline-success">등록</button>	
+							  	<button id="regRating" onclick="regRating();" class="btn btn-outline-success">등록</button>	
 							  	<!-- $checked.next().text() -->				
 							</span>
 						</div>
@@ -96,13 +96,24 @@
 <script src="${pagecontext.request.contextpath}/js/jquery-1.11.3.min.js"></script>
 <script src="${pagecontext.request.contextpath}/js/star.js"></script>
 <script>
+var menuId1 = ${menuId};
+var rating = ${rating};
+var ajaxUrl = "${ajaxUrl}";
+
+$(document).ready(function(){
+	$('input:radio[name=star-input]:input[value=${rating}]').attr("checked", true);
+	
+	if(ajaxUrl.indexOf("update") != -1) {
+		$('#regRating').text("수정")
+	}
+})
+
 function regRating(){
 	var $star = $(".star-input")
 	var $checked = $star.find(":checked");
 	var rating1 = $checked.next().text();
-	var menuId1 = ${menuId};
 	$.ajax({
-		url : '/menu/rating.do',
+		url : ajaxUrl,
 	  	type:'POST',
 		data : {
 			rating: rating1,

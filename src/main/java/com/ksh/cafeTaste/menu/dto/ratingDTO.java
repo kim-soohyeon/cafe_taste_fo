@@ -8,4 +8,5 @@ public class ratingDTO {
 	private String menuId;
 	private String userId;
 	private String rating;
+	private Integer count; 
 }

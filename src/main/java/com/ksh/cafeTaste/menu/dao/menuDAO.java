@@ -14,4 +14,8 @@ public interface menuDAO {
 
 	public void regRating(ratingDTO reqDto);
 
+	public ratingDTO getRating(ratingDTO rating);
+
+	public void updateRating(ratingDTO reqDto);
+
 }

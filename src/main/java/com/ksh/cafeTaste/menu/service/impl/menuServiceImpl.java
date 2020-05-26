@@ -32,5 +32,15 @@ public class menuServiceImpl implements menuService{
 		dao.regRating(reqDto);
 	}
 
+	@Override
+	public ratingDTO getRating(ratingDTO rating) {
+		return dao.getRating(rating);
+	}
+
+	@Override
+	public void updateRating(ratingDTO reqDto) {
+		dao.updateRating(reqDto);
+	}
+
 
 }

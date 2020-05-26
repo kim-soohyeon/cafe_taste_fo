@@ -29,4 +29,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 								, #{menuId}
 								, #{rating})
 </insert>
+
+<!-- 평점 가져오기 -->
+<select id="getRating" resultType="com.ksh.cafeTaste.menu.dto.ratingDTO">
+	SELECT rating
+		, count(*) as count
+	FROM cafe_taste.rating
+	WHERE userId = #{userId}
+	AND menuId = #{menuId}
+</select>
+
+<!-- 평점 수정 -->
+<update id="updateRating" parameterType="com.ksh.cafeTaste.menu.dto.ratingDTO">
+	UPDATE cafe_taste.rating
+	SET rating = #{rating}
+	WHERE userId = #{userId}
+	AND menuId = #{menuId}
+</update>
 </mapper>
