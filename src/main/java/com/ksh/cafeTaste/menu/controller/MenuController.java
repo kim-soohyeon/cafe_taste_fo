@@ -109,6 +109,7 @@ public class MenuController {
 		return jsonStr; 
 	}
 	
+//	평점 수정
 	@RequestMapping(value = "/updateRating.do", method = RequestMethod.POST, produces = "application/json; charset=utf8") 
 	public @ResponseBody String updateRating(ratingDTO reqDto, HttpServletRequest req) { 
 		HttpSession session = req.getSession();
